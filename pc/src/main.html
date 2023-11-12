@@ -7,11 +7,200 @@
 			@@include('./include/header.html')
 			<!-- middle -->
 			<section class="middle_zone main_contents_wrap">
-				내용이 들어갑니다.
+				<div class="mc_fxwrap_zone">
+					<div class="mc_fxwrap">
+						<div class="mc_fxcols has_row">
+							<div class="mc_fxitem_tb">
+								<div class="mc_fxitem_tr">
+									<div class="mc_fxitem_td">
+										<div class="mc_fxitem_group">
+											<div class="mc_fxitem">
+												<div class="mc_fxitem_title_row">
+													<p class="mc_fxtitle ico_01"><span class="mc_fxtitle_intext">인사정보</span></p>
+												</div>
+												<div class="mc_fxitem_content_row">
+													내용<br>
+													내용<br>
+													내용<br>
+													내용
+												</div>
+											</div>
+											<div class="mc_fxitem">
+												<div class="mc_fxitem_title_row">
+													<p class="mc_fxtitle ico_02"><span class="mc_fxtitle_intext">승인현황</span></p>
+												</div>
+												<div class="mc_fxitem_content_row">
+													내용
+												</div>
+											</div>
+											<div class="mc_fxitem pixed">
+												<div class="mc_fxitem_title_row">
+													<p class="mc_fxtitle ico_03"><span class="mc_fxtitle_intext">연차현황</span></p>
+													<div class="mc_fxtitle_else_g">
+														<span class="mc_fx_caption">사용/발생</span>
+													</div>
+												</div>
+												<div class="mc_fxitem_content_row">
+													내용
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mc_fxitem_tr">
+									<div class="mc_fxitem_td">
+										<div class="mc_fxitem_group">
+											<div class="mc_fxitem">
+												<div class="mc_fxitem_title_row">
+													<p class="mc_fxtitle ico_05"><span class="mc_fxtitle_intext">바로가기</span></p>
+													
+												</div>
+												<div class="mc_fxitem_content_row">
+													내용<br>
+													내용<br>
+													내용<br>
+													내용
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mc_fxitem_tr">
+									<div class="mc_fxitem_td">
+										<div class="mc_fxitem_group">
+											<div class="mc_fxitem">
+												<div class="mc_fxitem_title_row">
+													<p class="mc_fxtitle ico_07"><span class="mc_fxtitle_intext">공지사항</span></p>
+													<div class="mc_fxtitle_else_g">
+														<a href="javascript:;" class="btn_mcmore"></a>
+													</div>
+												</div>
+												<div class="mc_fxitem_content_row">
+													내용<br>
+													내용<br>
+													내용<br>
+													내용
+												</div>
+											</div>
+											<div class="mc_fxitem">
+												<div class="mc_fxitem_title_row">
+													<p class="mc_fxtitle ico_08"><span class="mc_fxtitle_intext">TO DO LIST</span></p>
+													<div class="mc_fxtitle_else_g">
+														<a href="javascript:;" class="btn_mcmore"></a>
+													</div>
+												</div>
+												<div class="mc_fxitem_content_row">
+													내용<br>
+													내용<br>
+													내용<br>
+													내용
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<div class="mc_fxcols short">
+							<div class="mc_fxitem_tb">
+								<div class="mc_fxitem_tr">
+									<div class="mc_fxitem">
+										<div class="mc_fxitem_title_row">
+											<p class="mc_fxtitle ico_04"><span class="mc_fxtitle_intext">부서현황</span></p>
+											<div class="mc_fxtitle_else_g">
+												<span class="mc_fx_caption">() 결재 미완료건</span>
+											</div>
+										</div>
+										<div class="mc_fxitem_content_row">
+											내용
+										</div>
+									</div>
+								</div>
+								<div class="mc_fxitem_tr">
+									<div class="mc_fxitem">
+										<div class="mc_fxitem_content_row single">
+											<div class="mc_single_cont_title_row">
+												<p class="mc_fxtitle ico_06"><span class="mc_fxtitle_intext">인사달력</span></p>
+												<p class="mc_fx_caption type2">날짜 클릭 시 근태현황 조회</p>
+											</div>
+											<div class="mc_calendar_wrap"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 			<!-- // middle -->
 			<script>
-				
+				$(function(){
+					// calendar
+					$(".mc_calendar_wrap").datepicker({
+						monthNames: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+						dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+						dateFormat: 'yy.mm.dd',
+						beforeShow: function() {
+							$(this).data('datepicker').inline = false;
+							var minValue = $(this).val();
+							minValue = $.datepicker.parseDate("yy.mm.dd", minValue);
+							dateChoice(minValue.getDate());
+							$(".mc_calendar_wrap .ui-datepicker-next").appendTo(".mc_calendar_wrap .ui-widget-header");
+						},
+						onSelect: function(date) {},
+						onChangeMonthYear: function() {
+							dateChoice();
+						}
+					});
+					dateChoice();
+				});
+
+
+				function dateChoice(choice_day) {
+					// 선택자 지정
+					setTimeout(function() {
+						$("[data-handler^='selectDay']").each(function() {
+							$(this).attr("data-date", $(this).text());
+						});
+						choiceFunc(choice_day);
+						$(".calendar_inrow").tooltip({
+							content: function(callback) {
+								// callback(
+								// 	$(this).prop('title').replaceAll('<br />', '<div class="tooltip_br"></div>').replaceAll('|', '<span class="title_tooltip_line">|</span>')
+								// );
+								callback($(this).prop('title').replace('<br />', '<br />'));
+							}
+						});
+					}, 50);
+				}
+
+				function choiceFunc(choice_day) {
+					var chioce_year_month = "[data-year^='2023'][data-month^='6']";
+					// 관리자 날짜 지정
+
+					$(chioce_year_month + "[data-date^='19']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 ", "&middot; 테스트 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 "]));
+					$(chioce_year_month + "[data-date^='20']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 ", "&middot; 테스트 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 "]));
+					// $(chioce_year_month + "[data-date^='19']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["&middot; 홍길동 | 연차 <br />&middot; 김진영 | 연차", "&middot; 김진영 | 연차"]));
+					// $(chioce_year_month + "[data-date^='20']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["&middot; 홍길동2 | 연차 <br />&middot; 김진영 | 연차", "&middot; 김진영 | 연차"]));
+				}
+
+				function dataTemplete(code, text, title) {
+					var dataRow = "";
+					var titleItem = title !== undefined ? title : "";
+					dataRow += "<div class='calendar_initem'>";
+					dataRow += "<a href='javascript:;' class='calendar_inrow' title='" + titleItem[0] + "'>";
+					dataRow += "<span class='calendar_mark_obj' style='background-color:" + code[0] + "'></span>";
+					dataRow += "<span class='calendar_intext'>" + text[0] + "</span>";
+					dataRow += "</a>";
+					dataRow += "<a href='javascript:;' class='calendar_inrow' title='" + titleItem[1] + "'>";
+					dataRow += "<span class='calendar_mark_obj' style='background-color:" + code[1] + "'></span>";
+					dataRow += "<span class='calendar_intext'>" + text[1] + "</span>";
+					dataRow += "</a>";
+					dataRow += "</div>";
+
+					return dataRow;
+				}
 			</script>
 		</div>
 	</body>
