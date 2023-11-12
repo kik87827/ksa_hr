@@ -6,7 +6,84 @@ var touchstart = "ontouchstart" in window;
 document.addEventListener("DOMContentLoaded", function() {
   commonInit();
   
+
+  commonLayout();
 });
+
+function commonInit() {
+  var touchstart = "ontouchstart" in window;
+  var userAgent = navigator.userAgent.toLowerCase();
+  var checkitem = [];
+  if (touchstart) {
+    browserAdd("touchmode");
+  }
+  if (userAgent.indexOf('samsung') > -1) {
+    browserAdd("samsung");
+  }
+
+  if (navigator.platform.indexOf('Win') > -1 || navigator.platform.indexOf('win') > -1) {
+    browserAdd("window");
+  }
+
+  if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+    // iPad or iPhone
+    browserAdd("ios");
+  }
+
+  function browserAdd(opt) {
+    document.querySelector("html").classList.add(opt);
+  }
+}
+
+
+function commonLayout() {
+  // mobile total
+  function mbTotal() {
+    var touchstart = "ontouchstart" in window;
+    var btn_mobile_menu = document.querySelector(".btn_mobile_menu"),
+      mobile_mainmenu_zone = document.querySelector(".mobile_mainmenu_zone"),
+      mainmenu_dim = document.querySelector(".mainmenu_dim"),
+      btn_mbmenuclose = document.querySelector(".btn_mbmenuclose"),
+      domHtml = document.querySelector("html"),
+      domBody = document.querySelector("body");
+
+    // init 
+    if (mobile_mainmenu_zone === null) {
+      return;
+    }
+    btn_mobile_menu.addEventListener("click", function(e) {
+      e.preventDefault();
+      totalOpen();
+    }, false);
+    btn_mbmenuclose.addEventListener("click", function(e) {
+      e.preventDefault();
+      totalClose();
+    }, false);
+    mainmenu_dim.addEventListener("click", function(e) {
+      e.preventDefault();
+      totalClose();
+    }, false);
+
+    function totalOpen() {
+      mobile_mainmenu_zone.classList.add("active")
+      setTimeout(function() {
+        mobile_mainmenu_zone.classList.add("motion");
+        if (touchstart) {
+          domHtml.classList.add("touchDis");
+        }
+      }, 30);
+    }
+
+    function totalClose() {
+      mobile_mainmenu_zone.classList.remove("motion");
+      setTimeout(function() {
+        mobile_mainmenu_zone.classList.remove("active");
+        domHtml.classList.remove("touchDis");
+      }, 500);
+    }
+  }
+  mbTotal();
+}
 
 $(function(){
 

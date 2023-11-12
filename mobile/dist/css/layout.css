@@ -41,7 +41,7 @@
 
 .header_main_imgtitle{display:flex;align-items: center;height:100%;position:absolute;top:0;left:0;padding:0 15px;}
 .header_main_imglogo{display:inline-block;font-size:0;line-height:0;}
-.header_main_imglogo > img{width:80px;vertical-align: top;}
+.header_main_imglogo > img{width:118px;vertical-align: top;}
 
 .btn_mobile_menu{display:block;position:absolute;width:51px;height:51px;top:0;right:0;}
 .btn_mobile_menu_obj{
@@ -63,7 +63,7 @@
 .mobile_mainmenu_wrap{width:247px;background:#fff;position:fixed;top:0;right:-247px;height:100%; transition: .5s;display:flex;flex-direction: column;}
 .mbelse_low{flex:0;padding:20px;text-align: center;}
 .mbelse_copy{font-size:10px;}
-.mbutil_low{height:50px;background:#3181da;display:flex;align-items: center;padding:0 50px 0 20px;position:relative;z-index:5;flex:0 0 50px;}
+.mbutil_low{height:50px;background:#014f55;display:flex;align-items: center;padding:0 50px 0 20px;position:relative;z-index:5;flex:0 0 50px;}
 .mbutil_hlist{
     display:flex;align-items: center;
 }
