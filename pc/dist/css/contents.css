@@ -109,6 +109,115 @@ _:-ms-fullscreen, :root .mc_calendar_wrap .ui-widget-header .ui-state-highlight{
 .title_tooltip_dot{display:inline-block;position:relative;top:-3px;content:'';width:2px;height:2px;background:#494949;}
 
 
+/* main contents */
+.profile_group{}
+.profile_thumnail{}
+.profile_thumnail > img{}
+.profile_spec_group{}
+.profile_spec_main{}
+.profile_util_list{}
+.profile_util_list > li{}
+.profile_util_list > li:after{}
+.profile_util_list > li:last-of-type:after{}
+.profile_util{}
+.profile_spec_sub{}
+
+.current_count_item_list_wrap{}
+.current_count_item_list{}
+.current_count_item_list > li{}
+.current_count_item_list > li:last-of-type{}
+
+.chart_bar_table_wrap{}
+.chart_bar_table{}
+.chart_bar_table tfoot{}
+.chart_bar_table tfoot tr{}
+.chart_bar_table tfoot td{}
+.chart_bar_table tbody{}
+.chart_bar_table tbody tr{}
+.chart_bar_table tbody td{}
+.chart_bar_table td.chart_total_cols{}
+.chart_bar_table td.chart_key_td{}
+.chart_bar_table td.chart_value_td{}
+.chart_bar_table td.chart_count_td{}
+.chart_total_item{}
+.chart_total_label_group{}
+.chart_total_label{}
+.chart_total_label_sub{}
+.chart_total_value{}
+.chart_key{}
+.chart_key_sub{}
+
+.chart_bar_wrap{}
+.chart_current_bar{}
+.bar_tooltip_wrap{}
+.bar_tooltip_wrap:after{}
+.tooltip_value_main{}
+.tooltip_value_unit{}
+
+.chart_bar_summary_wrap{}
+.chart_bar_summary_current{}
+.chart_bar_summary_part{}
+.chart_bar_summary_length{}
+
+.chart_text_count_item{}
+.chart_text_count_current{}
+.chart_text_count_part{}
+.chart_text_count_length{}
+.chart_text_count_unit{}
+
+
+.mc_quickmenu_list_wrap{}
+.mc_quickmenu_list{}
+.mc_quickmenu_list > li{}
+.mc_quickmenu{}
+.mc_quickmenu_ico{}
+.mc_quickmenu_ico.ico_02{}
+.mc_quickmenu_ico.ico_03{}
+.mc_quickmenu_ico.ico_04{}
+.mc_quickmenu_ico.ico_05{}
+.mc_quickmenu_ico.ico_06{}
+.mc_quickmenu_ico.ico_07{}
+.mc_quickmenu_ico.ico_08{}
+.mc_quickmenu_ico.ico_09{}
+.mc_quickmenu_spec{}
+
+.current_board_table_wrap{}
+.current_board_table{}
+.current_board_table tr{}
+.current_board_table th.key_td{}
+.current_board_table td.main_value_td{}
+.current_board_table td.sub_value_td{}
+.board_label{}
+.board_main_value{}
+.board_sub_value{}
+
+.text_getdata_list{}
+.text_getdata_list > li{border-bottom:1px solid #e7e7e7;padding:15px 10px;}
+.text_getdata_list > li:last-of-type{}
+.text_getdata{position:relative;display:flex;align-items: center;padding-left:24px;}
+.text_getdata:before{display:block;content:'';width:13px;height:13px;background:url("../images/icon_docu.png") no-repeat 0 0/100% auto;position:absolute;top:50%;left:0;transform: translateY(-50%);margin-top:1px;}
+
+
+.donut_chart_ui_wrap{}
+.donut_chart_title{}
+.donut_chart_title_sub{}
+.donut_chart_render_wrap{}
+.donut_chart_else_cols{}
+.chart_guide_item_list{}
+.chart_guide_item_list > li{}
+.chart_guide_item_list > li:last-of-type{}
+
+.chart_guide_item{}
+.chart_guide_marker{}
+.chart_guide_key{}
+.chart_guide_count{}
+
+.donut_chart_render_wrap{}
+.donut_chart_render{}
+
+.donut_chart_render_layer{}
+.donut_chart_render_count{}
+
 @media (max-width:1589px){
 	.mc_fxcols.short{flex:0 0 450px;}
 	.mc_fxitem.pixed{width:450px;flex:0 0 450px;}
