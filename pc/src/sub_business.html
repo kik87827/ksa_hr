@@ -53,44 +53,102 @@
 													</div>
 												</div>
 												<div class="mc_fxitem_content_row">
-													<div class="donut_chart_ui_wrap">
-														<p class="donut_chart_title">연차<span class="donut_chart_title_sub">(1년미만)</span></p>
-														<div class="donut_chart_render_wrap">
-															<div class="donut_chart_else_cols">
-																<ul class="chart_guide_item_list">
-																	<li>
-																		<div class="chart_guide_item">
-																			<span class="chart_guide_marker" style="background-color:#dddddd;"></span>
-																			<span class="chart_guide_key">발생일수</span>
-																			<span class="chart_guide_count">6</span>
+													<div class="chart_bar_table_wrap">
+														<table class="chart_bar_table">
+															<tfoot>
+																<tr>
+																	<td colspan="3" class="chart_total_cols">
+																		<div class="chart_total_item">
+																			<div class="chart_total_label_group">
+																				<span class="chart_total_label">근무시간</span>
+																				<span class="chart_total_label_sub">(누적)</span>
+																			</div>
+																			<div class="chart_total_value">총 200시간</div>
 																		</div>
-																	</li>
-																	<li>
-																		<div class="chart_guide_item">
-																			<span class="chart_guide_marker" style="background-color:#ef8616;"></span>
-																			<span class="chart_guide_key">사용일수</span>
-																			<span class="chart_guide_count">1</span>
+																	</td>
+																</tr>
+															</tfoot>
+															<tbody>
+																<tr>
+																	<td class="chart_key_td"><span class="chart_key">연차<span class="chart_key_sub">(1년미만)</span></span></td>
+																	<td class="chart_value_td">
+																		<div class="chart_bar_wrap">
+																			<div class="chart_current_bar" style="width:10.2%;background-color:#ef8616;">
+																				<div class="bar_tooltip_wrap">
+																					<span class="tooltip_value_main">10.2</span>
+																					<span class="tooltip_value_unit">%</span>
+																				</div>
+																			</div>
 																		</div>
-																	</li>
-																</ul>
-															</div>
-															<div class="donut_chart_main_cols">
-																<div class="donut_chart_render_wrap">
-																	<div class="donut_chart_render">
-																		<img src="./images/temp_chart.png" style="vertical-align: middle;" alt="">
-																	</div>
-																	<div class="donut_chart_render_layer">
-																		<div class="donut_chart_render_count">10.2%</div>
-																	</div>
-																</div>
-															</div>
-															<div class="donut_chart_else_cols"></div>
-														</div>
-														<div class="donut_chart_detail_wrap">
-															<span class="donut_chart_current">16시간 00분</span>
-															<span class="donut_chart_part"> / </span>
-															<span class="donut_chart_length">48시간 00분</span>
-														</div>
+																		<div class="chart_bar_summary_wrap">
+																			<span class="chart_bar_summary_current">16시간 00분</span>
+																			<span class="chart_bar_summary_part">/</span>
+																			<span class="chart_bar_summary_length">48시간 00분</span>
+																		</div>
+																	</td>
+																	<td class="chart_count_td">
+																		<div class="chart_text_count_item">
+																			<span class="chart_text_count_current">1</span>
+																			<span class="chart_text_count_part">/</span>
+																			<span class="chart_text_count_length">6</span>
+																			<span class="chart_text_count_unit">일</span>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="chart_key_td"><span class="chart_key">연차</span></td>
+																	<td class="chart_value_td">
+																		<div class="chart_bar_wrap">
+																			<div class="chart_current_bar" style="width:33.3%;background-color:#6badf5;">
+																				<div class="bar_tooltip_wrap">
+																					<span class="tooltip_value_main">33.3</span>
+																					<span class="tooltip_value_unit">%</span>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="chart_bar_summary_wrap">
+																			<span class="chart_bar_summary_current">55시간 10분</span>
+																			<span class="chart_bar_summary_part">/</span>
+																			<span class="chart_bar_summary_length">166시간 30분</span>
+																		</div>
+																	</td>
+																	<td class="chart_count_td">
+																		<div class="chart_text_count_item">
+																			<span class="chart_text_count_current">5</span>
+																			<span class="chart_text_count_part">/</span>
+																			<span class="chart_text_count_length">15</span>
+																			<span class="chart_text_count_unit">일</span>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="chart_key_td"><span class="chart_key">보상휴가</span></td>
+																	<td class="chart_value_td">
+																		<div class="chart_bar_wrap">
+																			<div class="chart_current_bar" style="width:33.3%">
+																				<div class="bar_tooltip_wrap">
+																					<span class="tooltip_value_main">33.3</span>
+																					<span class="tooltip_value_unit">%</span>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="chart_bar_summary_wrap">
+																			<span class="chart_bar_summary_current">16시간 00분</span>
+																			<span class="chart_bar_summary_part">/</span>
+																			<span class="chart_bar_summary_length">24시간 00분</span>
+																		</div>
+																	</td>
+																	<td class="chart_count_td">
+																		<div class="chart_text_count_item">
+																			<span class="chart_text_count_current">2</span>
+																			<span class="chart_text_count_part">/</span>
+																			<span class="chart_text_count_length">3</span>
+																			<span class="chart_text_count_unit">일</span>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
 													</div>
 												</div>
 											</div>
@@ -346,25 +404,23 @@
 				}
 
 				function choiceFunc(choice_day) {
-					var chioce_year_month = "[data-year^='2023'][data-month^='0']";
+					var chioce_year_month = "[data-year^='2023'][data-month^='10']";
 					// 관리자 날짜 지정
 
-
-					$(chioce_year_month + "[data-date^='19']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["홍길동 08:00 -17:00<br />홍길동 08:00 -17:00<br />홍길동 08:00 -17:00", "테스트 08:00 -17:00<br />홍길동 08:00 -17:00<br />홍길동 08:00 -17:00"]));
-					$(chioce_year_month + "[data-date^='20']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["테스트 08:00 -17:00<br />홍길동 08:00 -17:00<br />홍길동 08:00 -17:00", "테스트 08:00 -17:00<br />홍길동 08:00 -17:00<br />홍길동 08:00 -17:00"]));
+					$(chioce_year_month + "[data-date^='22']").append(dataTemplete(["#f24343", "#3573b9"], ["08:00", "18:00"], ["&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 ", "&middot; 테스트 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 "]));
+					$(chioce_year_month + "[data-date^='23']").append(dataTemplete(["#f24343", "#3573b9"], ["08:00", "18:00"], ["&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 ", "&middot; 테스트 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 "]));
+					// $(chioce_year_month + "[data-date^='19']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["&middot; 홍길동 | 연차 <br />&middot; 김진영 | 연차", "&middot; 김진영 | 연차"]));
+					// $(chioce_year_month + "[data-date^='20']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["&middot; 홍길동2 | 연차 <br />&middot; 김진영 | 연차", "&middot; 김진영 | 연차"]));
 				}
 
 				function dataTemplete(code, text, title) {
 					var dataRow = "";
 					var titleItem = title !== undefined ? title : "";
-					console.log(titleItem);
 					dataRow += "<div class='calendar_initem'>";
 					dataRow += "<a href='javascript:;' class='calendar_inrow' title='" + titleItem[0] + "'>";
-					dataRow += "<span class='calendar_mark_obj' style='background-color:" + code[0] + "'></span>";
 					dataRow += "<span class='calendar_intext'>" + text[0] + "</span>";
 					dataRow += "</a>";
 					dataRow += "<a href='javascript:;' class='calendar_inrow' title='" + titleItem[1] + "'>";
-					dataRow += "<span class='calendar_mark_obj' style='background-color:" + code[1] + "'></span>";
 					dataRow += "<span class='calendar_intext'>" + text[1] + "</span>";
 					dataRow += "</a>";
 					dataRow += "</div>";
