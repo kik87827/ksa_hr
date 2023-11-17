@@ -14,11 +14,35 @@ HGREEN = {
 				$("html").removeClass("touchmode");
 			}
 			funcThis.dimLayerControl();
+			funcThis.layerCommon();
 		});
 		$(window).on("load",function(){
 		});
 	},
-	
+	layerCommon : function(){
+		var $hlog_target = $(".hlog_target"),
+			$hlog_layer = $(".hlog_layer");
+		$hlog_target.on("click",function(){
+			var $this = $(this),
+				$t_n = $this.next(".hlog_layer");
+			$this.toggleClass("active");
+			$t_n.slideToggle();
+		});
+		$(document).on("click",function(e){
+			if(!$(e.target).parents(".hlogdata").length){
+				$hlog_target.removeClass("active");
+				$hlog_layer.slideUp();
+			}
+		});
+		
+		var $btn_left_toggle = $(".btn_left_toggle"),
+			$midscont_both = $(".midscont_both");
+		$btn_left_toggle.on("click",function(){
+			$midscont_both.toggleClass("type2");
+			$(this).toggleClass("active");
+			$(window).trigger("resize");
+		});
+	},
 	dimLayerControl : function(){
 		var thisUI = this;
 		$(document).on("click",".btn_layerclose , .closetrigger",function(){
