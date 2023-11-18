@@ -127,7 +127,7 @@ body ::-webkit-scrollbar-track {background-color: transparent;border-radius: 10p
 .midsc_menu_w{padding:5px;}
 .midscont_both{width:1280px;position:relative;min-height:1110px;}
 .midscont_both:after{display:block;content:'';clear:both;}
-.midscont_right{width:984px;float:right;padding:10px 0 0;}
+.midscont_right{width:984px;float:right;padding:10px 0 130px;}
 .btn_left_toggle{display:none;position:absolute;top:363px;right:-16px;width:16px;height:38px;background:url("../images/btn_left_toggle.png") no-repeat 0 0;}
 .midscont_both.type2 .midscont_left{width:0;padding:0;height:0;}
 .midscont_both.type2 .midscont_left_in{width:0;overflow:hidden;display:none;}
