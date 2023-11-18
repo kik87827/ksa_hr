@@ -20,7 +20,7 @@
 												</div>
 												<div class="mc_fxitem_content_row">
 													<div class="profile_group">
-														<div class="profile_thumnail"><img src="./assets/images/temp_80x80.png" alt=""></div>
+														<div class="profile_thumnail"><img src="./images/temp_80x80.png" alt=""></div>
 														<div class="profile_spec_group">
 															<p class="profile_spec_main">홍길동</p>
 															<ul class="profile_util_list">
@@ -55,8 +55,8 @@
 												<div class="mc_fxitem_content_row">
 													<div class="donut_chart_ui_wrap">
 														<p class="donut_chart_title">연차<span class="donut_chart_title_sub">(1년미만)</span></p>
-														<div class="donut_chart_render_wrap">
-															<div class="donut_chart_else_cols">
+														<div class="donut_chart_render_zone">
+															<div class="donut_chart_else_cols define_guide">
 																<ul class="chart_guide_item_list">
 																	<li>
 																		<div class="chart_guide_item">
@@ -77,7 +77,7 @@
 															<div class="donut_chart_main_cols">
 																<div class="donut_chart_render_wrap">
 																	<div class="donut_chart_render">
-																		<img src="./images/temp_chart.png" style="vertical-align: middle;" alt="">
+																		<img src="./images/temp_chart.png" style="vertical-align: top;" alt="">
 																	</div>
 																	<div class="donut_chart_render_layer">
 																		<div class="donut_chart_render_count">10.2%</div>
@@ -290,11 +290,26 @@
 								<div class="mc_fxitem_tr">
 									<div class="mc_fxitem">
 										<div class="mc_fxitem_content_row single">
-											<div class="mc_single_cont_title_row">
-												<p class="mc_fxtitle ico_06"><span class="mc_fxtitle_intext">인사달력</span></p>
-												<p class="mc_fx_caption type2">날짜 클릭 시 근태현황 조회</p>
+											<div class="mc_single_cont_wrap">
+												<p class="mc_calendar_caption">날짜 클릭 시 근태현황 조회</p>
+												<div class="dot_guide_item_wrap">
+													<ul class="dot_guide_item_list">
+														<li>
+															<div class="dot_guide_item">
+																<span class="calendar_guide_dot" style="background-color:#ffba00;"></span>
+																<span class="calendar_guide_text">출근</span>
+															</div>
+														</li>
+														<li>
+															<div class="dot_guide_item">
+																<span class="calendar_guide_dot" style="background-color:#93c6fe;"></span>
+																<span class="calendar_guide_text">퇴근</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="mc_calendar_wrap"></div>
 											</div>
-											<div class="mc_calendar_wrap"></div>
 										</div>
 									</div>
 								</div>
@@ -346,18 +361,18 @@
 				}
 
 				function choiceFunc(choice_day) {
-					var chioce_year_month = "[data-year^='2023'][data-month^='0']";
+					var chioce_year_month = "[data-year^='2023'][data-month^='10']";
 					// 관리자 날짜 지정
 
-
-					$(chioce_year_month + "[data-date^='19']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["홍길동 08:00 -17:00<br />홍길동 08:00 -17:00<br />홍길동 08:00 -17:00", "테스트 08:00 -17:00<br />홍길동 08:00 -17:00<br />홍길동 08:00 -17:00"]));
-					$(chioce_year_month + "[data-date^='20']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["테스트 08:00 -17:00<br />홍길동 08:00 -17:00<br />홍길동 08:00 -17:00", "테스트 08:00 -17:00<br />홍길동 08:00 -17:00<br />홍길동 08:00 -17:00"]));
+					$(chioce_year_month + "[data-date^='19']").append(dataTemplete(["#ffba00", "#93c6fe"], ["08:00", "18:00"], ["&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 ", "&middot; 테스트 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 "]));
+					$(chioce_year_month + "[data-date^='20']").append(dataTemplete(["#ffba00", "#93c6fe"], ["08:00", "18:00"], ["&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 ", "&middot; 테스트 | 연차 <br />&middot; 홍길동 | 연차 <br />&middot; 홍길동 | 연차 "]));
+					// $(chioce_year_month + "[data-date^='19']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["&middot; 홍길동 | 연차 <br />&middot; 김진영 | 연차", "&middot; 김진영 | 연차"]));
+					// $(chioce_year_month + "[data-date^='20']").append(dataTemplete(["#f24343", "#3573b9"], ["1명", "0명"], ["&middot; 홍길동2 | 연차 <br />&middot; 김진영 | 연차", "&middot; 김진영 | 연차"]));
 				}
 
 				function dataTemplete(code, text, title) {
 					var dataRow = "";
 					var titleItem = title !== undefined ? title : "";
-					console.log(titleItem);
 					dataRow += "<div class='calendar_initem'>";
 					dataRow += "<a href='javascript:;' class='calendar_inrow' title='" + titleItem[0] + "'>";
 					dataRow += "<span class='calendar_mark_obj' style='background-color:" + code[0] + "'></span>";
