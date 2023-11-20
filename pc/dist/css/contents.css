@@ -231,7 +231,7 @@ _:-ms-fullscreen, :root .mc_calendar_wrap .ui-widget-header .ui-state-highlight{
 .getdata_sub{flex:0;display:inline-block;color:#5f5f5f;font-size:14px;line-height:1;white-space: nowrap;}
 
 
-.donut_chart_ui_wrap{width:100%;}
+.donut_chart_ui_wrap{width:100%;padding:9px 0 10px;}
 .donut_chart_title{font-size:17px;color:#333333;line-height:1;}
 .donut_chart_title_sub{font-size:14px;color:#4e4e4e;}
 .donut_chart_render_zone{display:flex;width:100%;align-items:center;}
