@@ -145,15 +145,15 @@ _:-ms-fullscreen, :root .mc_calendar_wrap .ui-widget-header .ui-state-highlight{
 .current_count_text.type2{color:#f45d5d; }
 .current_count_caption{font-size:17px;color:#2b2b2b;display:block;text-align: center;margin-top:10px;}
 
-.chart_bar_table_wrap{width:100%;box-sizing: border-box;padding:20px 0;}
+.chart_bar_table_wrap{width:100%;box-sizing: border-box;padding:10px 0 0;}
 .chart_bar_table{width:100%;}
 .chart_bar_table tfoot{}
 .chart_bar_table tfoot tr{}
-.chart_bar_table tfoot td{text-align: left;vertical-align: top;font-size:0;line-height:0;}
+.chart_bar_table tfoot td{text-align: left;vertical-align: top;font-size:0;line-height:0;padding-top:20px;}
 .chart_bar_table tbody{}
 .chart_bar_table tbody tr{}
-.chart_bar_table tbody td{vertical-align: top;font-size:0;line-height:0;padding-bottom:27px;}
-.chart_bar_table tbody td:last-of-type{padding-bottom:0}
+.chart_bar_table tbody td{vertical-align: top;font-size:0;line-height:0;padding-bottom:25px;}
+.chart_bar_table tbody tr:last-of-type td{padding-bottom:0}
 .chart_bar_table td.chart_total_cols{}
 .chart_bar_table td.chart_key_td{white-space: nowrap;width:1px;text-align: left;padding-right:20px;}
 .chart_bar_table td.chart_value_td{}
@@ -169,7 +169,7 @@ _:-ms-fullscreen, :root .mc_calendar_wrap .ui-widget-header .ui-state-highlight{
 .chart_bar_wrap{height:10px;background:#e3e3e3;border-radius:100px;position:relative;}
 .chart_current_bar{height:100%;border-radius:100px;position:absolute;top:0;left:0;}
 .bar_tooltip_zone{position:absolute;width:1px;top:0;right:0;}
-.bar_tooltip_wrap{position:absolute;left:50%;bottom:9px;display:flex;justify-content:center;padding:4px 6px 5px;transform: translateX(-50%);color:#333333;border:1px solid #cecece; border-radius:4px;background:#fff;font-size:13px;line-height:1;white-space: nowrap;}
+.bar_tooltip_wrap{position:absolute;left:50%;bottom:7px;display:flex;justify-content:center;padding:2px 5px 3px;transform: translateX(-50%);color:#333333;border:1px solid #cecece; border-radius:4px;background:#fff;font-size:13px;line-height:1;white-space: nowrap;}
 .bar_tooltip_wrap:after{display:block;content:'';position:absolute;top:100%;left:50%;background:url("../images/chart_tooltip_pointer.png") no-repeat 0 0/100% auto;width:11px;height:7px;transform: translateX(-50%);}
 .tooltip_value_main{}
 .tooltip_value_unit{}
@@ -212,9 +212,9 @@ _:-ms-fullscreen, :root .mc_calendar_wrap .ui-widget-header .ui-state-highlight{
 .current_board_table tr:first-of-type th,
 .current_board_table tr:first-of-type td{padding-top:0 !important;}
 .current_board_table tr th,
-.current_board_table tr td{padding:15px 20px;border-bottom:1px solid #e7e7e7;}
+.current_board_table tr td{padding:13px 20px;border-bottom:1px solid #e7e7e7;}
 .current_board_table tr td:last-of-type{padding-right:25px;}
-.current_board_table th.key_td{text-align: left;padding:15px;}
+.current_board_table th.key_td{text-align: left;padding:18px 15px;}
 .current_board_table td.main_value_td{white-space: nowrap;width:1px;}
 .current_board_table td.sub_value_td{white-space: nowrap;width:1px;}
 .board_label{font-size:15px; color:#333333;display:inline-block;}
@@ -232,7 +232,7 @@ _:-ms-fullscreen, :root .mc_calendar_wrap .ui-widget-header .ui-state-highlight{
 
 
 .donut_chart_ui_wrap{width:100%;}
-.donut_chart_title{font-size:17px;color:#333333;}
+.donut_chart_title{font-size:17px;color:#333333;line-height:1;}
 .donut_chart_title_sub{font-size:14px;color:#4e4e4e;}
 .donut_chart_render_zone{display:flex;width:100%;align-items:center;}
 .donut_chart_else_cols{flex:1;}
