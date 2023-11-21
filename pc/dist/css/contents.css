@@ -6,7 +6,7 @@
 
 /* main */
 
-.mc_fxwrap_zone{max-width:1590px;margin:15px auto;padding:0 20px 15px;}
+.mc_fxwrap_zone{max-width:1590px;margin:10px auto;padding:0 20px 15px;}
 .mc_fxwrap{display:flex;margin:0 -4.5px;}
 .mc_fxcols{flex:1;margin:0 4.5px;display:flex;flex-direction: column;min-width:0;}
 .mc_fxitem_group{display:flex;height:100%;}
