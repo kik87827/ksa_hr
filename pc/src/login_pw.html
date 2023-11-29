@@ -1,59 +1,73 @@
+
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="format-detection" content="telephone=no" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=1280" />
-	<link rel="stylesheet" href="./css/reset.css" />
-	<link rel="stylesheet" href="./css/jqueryui.css" />
-	<link rel="stylesheet" href="./css/swiper.min.css" />
-	<link rel="stylesheet" href="./css/layout.css" />
-	<link rel="stylesheet" href="./css/contents.css" />
-	<script src="./js/jquery-1.12.4.min.js"></script>
-	<script src="./js/jquery-ui.js"></script>
-	<script src="./js/swiper.min.js"></script>
-	<script src="./js/ui.js"></script>
-	<title>KSA 한국표준협회</title>
-</head>
-
-<body class="front_body">
-	<div class="page_wrap">
-		<!-- header -->
-		<header class="header_zone">
-			<hgroup class="header_top_wrap">
-				<div class="header_top_inner">
-					<h1 class="header_logo"><a href="#" class="logo_item"><img src="./images/toplogo.png" alt="KSA 한국표준협회"></a></h1>
-					<div class="header_util_wrap">
-						<ul class="header_util_list">
-							<li><a href="#" class="util_ico_menu ico_men"><span class="util_ico_menutext">곽훈도님</span></a></li>
-							<li><a href="#" class="util_box_menu">로그아웃</a></li>
-						</ul>
+	@@include('./include/head.html')
+	<body class="front_body">
+		<div class="page_wrap center_type">
+			<header class="center_header_wrap">
+				<h1 class="center_toplogo_title"><a href="#" class="center_toplogo_link"><img src="./images/center_toplogo.png" alt="KSA 한국표준협회"></a></h1>
+				<div class="center_util_item_wrap">
+					<ul class="center_util_list">
+						<li><p class="center_util_ment">인사시스템에 오신것을 환영합니다!</p></li>
+					</ul>
+				</div>
+			</header>
+			<section class="center_middle_wrap">
+				<div class="center_form_tb_wrap">
+					<div class="center_form_tb">
+						<div class="center_form_td">
+							<div class="center_form_box">
+								<div class="center_form_title_row"><h2 class="center_form_title">비밀번호 초기화</h2></div>
+								<div class="center_form_content">
+									<div class="form_block_wrap">
+										<div class="form_block">
+											<select class="form_select mode_placeholder" required>
+												<option value="">사번</option>
+												<option value="1">123456789</option>
+											</select>
+										</div>
+										<div class="form_block">
+											<input type="text" class="form_input" placeholder="생년월일 6자리">
+										</div>
+										<div class="form_block">
+											<input type="text" class="form_input" placeholder="주민등록번호 뒤 7자리">
+										</div>
+										<div class="form_block define_flex">
+											<div class="form_block_cols">
+												<div class="props_item">
+													<input type="checkbox" class="props_form" id="saveid" checked>
+													<label for="saveid" class="props_label">아이디 저장</label>
+												</div>
+											</div>
+											<div class="form_block_cols">
+												<a href="#" class="btn_form_quad">비밀번호 SMS요청</a>
+											</div>
+										</div>
+										<div class="btn_form_submit_wrap">
+											<a href="#" class="btn_form_submit"><span class="btn_form_submit_text">확인</span></a>
+										</div>
+										<div class="form_box_copy_wrap">
+											<a href="#" class="btn_text_only">로그인으로 돌아가기</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</hgroup>
-			<nav class="header_gnb_wrap">
-				<ul class="header_gnb_list">
-					<li><a href="#" class="gnb_menu_item">인사기획</a></li>
-					<li><a href="#" class="gnb_menu_item">인사운영</a></li>
-					<li><a href="#" class="gnb_menu_item">근태관리</a></li>
-					<li><a href="#" class="gnb_menu_item">인재육성</a></li>
-					<li><a href="#" class="gnb_menu_item">보상관리</a></li>
-					<li><a href="#" class="gnb_menu_item">복리후생</a></li>
-					<li><a href="#" class="gnb_menu_item">시스템관리</a></li>
-				</ul>
-			</nav>
-		</header>
-		<!-- // header -->
-		<!-- middle -->
-		<section class="middle_zone">
-			<div class="mc_boxitem_wrap">
-				내용이 들어갑니다.
-			</div>
-		</section>
-		<!-- // middle -->
-	</div>
-</body>
-
+			</section>
+			<footer class="center_footer_wrap">
+				<div class="center_footer_inner">
+					<div class="center_footer_inner_cols">
+						<span class="center_footer_logo">
+							<img src="./images/center_bottomlogo.png" alt="KSA 한국표준협회">
+						</span>
+					</div>
+					<div class="center_footer_inner_cols">
+						<p class="center_footer_copy">Copyright © Ksa. All rights reserved.</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
 </html>
