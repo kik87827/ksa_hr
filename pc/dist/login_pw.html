@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="./css/swiper.min.css" />
 	<link rel="stylesheet" href="./css/layout.css" />
 	<link rel="stylesheet" href="./css/contents.css" />
+	<script src="./js/dynamicListener.min.js"></script>
 	<script src="./js/jquery-1.12.4.min.js"></script>
 	<script src="./js/jquery-ui.js"></script>
 	<script src="./js/swiper.min.js"></script>
@@ -31,45 +32,41 @@
 			</div>
 		</header>
 		<section class="center_middle_wrap">
-			<div class="center_form_tb_wrap">
-				<div class="center_form_tb">
-					<div class="center_form_td">
-						<div class="center_form_box">
-							<div class="center_form_title_row">
-								<h2 class="center_form_title">비밀번호 초기화</h2>
+			<div class="center_form_box_wrap">
+				<div class="center_form_box">
+					<div class="center_form_title_row">
+						<h2 class="center_form_title">비밀번호 초기화</h2>
+					</div>
+					<div class="center_form_content">
+						<div class="form_block_wrap">
+							<div class="form_block">
+								<select class="form_select mode_placeholder" required>
+									<option value="">사번</option>
+									<option value="1">123456789</option>
+								</select>
 							</div>
-							<div class="center_form_content">
-								<div class="form_block_wrap">
-									<div class="form_block">
-										<select class="form_select mode_placeholder" required>
-											<option value="">사번</option>
-											<option value="1">123456789</option>
-										</select>
-									</div>
-									<div class="form_block">
-										<input type="text" class="form_input" placeholder="생년월일 6자리">
-									</div>
-									<div class="form_block">
-										<input type="text" class="form_input" placeholder="주민등록번호 뒤 7자리">
-									</div>
-									<div class="form_block define_flex">
-										<div class="form_block_cols">
-											<div class="props_item">
-												<input type="checkbox" class="props_form" id="saveid" checked>
-												<label for="saveid" class="props_label">아이디 저장</label>
-											</div>
-										</div>
-										<div class="form_block_cols">
-											<a href="#" class="btn_form_quad">비밀번호 SMS요청</a>
-										</div>
-									</div>
-									<div class="btn_form_submit_wrap">
-										<a href="#" class="btn_form_submit"><span class="btn_form_submit_text">확인</span></a>
-									</div>
-									<div class="form_box_copy_wrap">
-										<a href="#" class="btn_text_only">로그인으로 돌아가기</a>
+							<div class="form_block">
+								<input type="text" class="form_input" placeholder="생년월일 6자리">
+							</div>
+							<div class="form_block">
+								<input type="text" class="form_input" placeholder="주민등록번호 뒤 7자리">
+							</div>
+							<div class="form_block define_flex">
+								<div class="form_block_cols">
+									<div class="props_item">
+										<input type="checkbox" class="props_form" id="saveid" checked>
+										<label for="saveid" class="props_label">아이디 저장</label>
 									</div>
 								</div>
+								<div class="form_block_cols">
+									<a href="#" class="btn_form_quad">비밀번호 SMS요청</a>
+								</div>
+							</div>
+							<div class="btn_form_submit_wrap">
+								<a href="#" class="btn_form_submit"><span class="btn_form_submit_text">확인</span></a>
+							</div>
+							<div class="form_box_copy_wrap">
+								<a href="#" class="btn_text_only">로그인으로 돌아가기</a>
 							</div>
 						</div>
 					</div>
@@ -89,6 +86,9 @@
 			</div>
 		</footer>
 	</div>
+	<script>
+		selectFunc();
+	</script>
 </body>
 
 </html>
