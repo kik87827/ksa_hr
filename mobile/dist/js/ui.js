@@ -88,3 +88,30 @@ function commonLayout() {
 $(function(){
 
 });
+
+
+
+
+function selectFunc(){
+	const form_select = document.querySelectorAll(".form_select");
+
+	if(!!form_select){
+		form_select.forEach((item)=>{
+			valueCheck(item);
+		});
+	}
+
+	addDynamicEventListener(document.body, 'change', '.form_select', function(e) {
+		const thisTarget = e.target;
+
+		valueCheck(thisTarget);
+	});
+
+	function valueCheck(target){
+		if(!target.value){
+		target.classList.add("current_placeholder");
+		}else{
+		target.classList.remove("current_placeholder");
+		}
+	}
+}
