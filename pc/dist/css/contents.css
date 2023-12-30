@@ -271,6 +271,7 @@ _:-ms-fullscreen, :root .mc_calendar_wrap .ui-widget-header .ui-state-highlight{
 /* sub */
 .sub_board_box{position:relative;overflow:hidden;display:flex;border-radius:18px;margin:34px 0 54px; min-height:290px;}
 .sub_board_visual_cols{flex:1; min-width:0; background:url("../images/img_sv_photo.jpg") no-repeat 50% 50%/cover;padding:35px;}
+.sub_board_visual_cols.bgtype2{background-image:url("../images/img_sv_photo_main2.jpg")}
 .sub_board_visual_copy_group{}
 .visual_copy_main{font-size:33px; color:#fff; font-family: 'NanumSquare'; font-weight: 700;}
 .visual_copy_sub{margin-top:5px; font-size:20px; color:#fff; font-family: 'NanumSquare';}
