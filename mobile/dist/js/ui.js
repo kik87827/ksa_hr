@@ -115,3 +115,15 @@ function selectFunc(){
 		}
 	}
 }
+
+
+function tblabelFunc(){
+  const field_label_text = document.querySelectorAll(".field_label_text");
+  let arrayWid = [];
+  field_label_text.forEach((item)=>{
+    arrayWid.push(item.getBoundingClientRect().width);
+  });
+  field_label_text.forEach((item)=>{
+    item.style.width = Math.max.apply(null,arrayWid) + "px";
+  });
+}
