@@ -20,7 +20,7 @@
 		<header class="header_zone type3">
 			<a href="#" class="btn_top_home"><span class="hdtext">홈</span></a>
 
-			<h1 class="header_sub_title"><span class="header_sub_title_inner">페이지 타이틀</span></h1>
+			<h1 class="header_sub_title"><span class="header_sub_title_inner">시내교통비신청</span></h1>
 
 			<a href="#" class="btn_mobile_menu type2">
 				<div class="btn_mobile_menu_obj"></div>
@@ -75,6 +75,53 @@
 			내용이 들어갑니다.
 		</section>
 		<!-- // middle -->
+
+		<!-- layer -->
+		<div class="dlayer_w" id="downtown_detail_01_popup">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_box">
+				<div class="dlayer_tit_low">
+					<h2 class="dlayer_tit">외출부신청내역</h2>
+				</div>
+				<div class="dlayer_cont_low">
+					내용이 들어갑니다.
+				</div>
+				<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<div class="dlayer_w" id="downtown_detail_02_popup">
+			<div class="dlayer_bg"></div>
+			<div class="dlayer_box">
+				<div class="dlayer_tit_low">
+					<h2 class="dlayer_tit">사내교통비신청 상세정보</h2>
+				</div>
+				<div class="dlayer_cont_low">
+					내용이 들어갑니다.
+				</div>
+				<a href="#" class="btn_dlayerclose"><span class="hdtext">닫기</span></a>
+			</div>
+		</div>
+		<!-- // layer -->
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				// 퍼블 확인용
+				let url = window.location.href.split('?')[1];
+				let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+				window.addEventListener("DOMContentLoaded", () => {
+					if (url_2 === "popup_01") {
+						dimLayerShow({
+							target: "#downtown_detail_01_popup"
+						});
+					} else if (url_2 === "popup_02") {
+						dimLayerShow({
+							target: "#downtown_detail_02_popup"
+						});
+					}
+				});
+			});
+		</script>
 	</div>
 </body>
 

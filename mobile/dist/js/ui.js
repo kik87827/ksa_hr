@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
   commonLayout();
 });
 
+$(function(){
+  dimLayerControl();
+})
+
 function commonInit() {
   var touchstart = "ontouchstart" in window;
   var userAgent = navigator.userAgent.toLowerCase();
@@ -125,5 +129,77 @@ function tblabelFunc(){
   });
   field_label_text.forEach((item)=>{
     item.style.width = Math.max.apply(null,arrayWid) + "px";
+  });
+}
+
+
+
+
+/* popup */
+function dimLayerControl(){
+  var objThis = this,
+    $modal = $(".dlayer_w");
+  if($modal.length===0){return;}
+  $modal.on("click",".dlayer_bg , .btn_dlayerclose,.closetrigger",function(e){
+    var $this = $(this),
+      $t_p = $this.parents(".dlayer_w");
+    e.preventDefault();
+    objThis.dimLayerHide({ 'target' : $t_p});
+  });
+}
+function dimLayerShow(option){
+  var touchIs = "ontouchstart" in window,
+    $modal = null,
+    $target = null;
+
+  $(function(){
+    $modal = $(".dlayer_w");
+    
+    $target = $(option.target);
+    
+    if($modal.length===0){return;}
+
+    if($(".popup_zone").length==0){
+      $(".page_wrap").append("<div class='popup_zone' />");
+    }
+    //$modal.removeClass("active");
+    $(".popup_zone").append($target);
+    $target.addClass("active");
+    
+    $(".page_wrap").css({"z-index":0});
+    heightcheck();
+    if("openCallback" in option){
+      option.openCallback();
+    }
+    function heightcheck(){
+      if(touchIs){
+        $("html").addClass("touchDis");
+      }
+    }
+  });
+}
+function dimLayerHide(option){
+  var touchIs = "ontouchstart" in window,
+      $modal = null,
+      $target = null;
+    
+  $(function(){
+    $modal = $(".dlayer_w");
+    $target = $(option.target);
+    $target.removeClass("active");
+    $(".page_wrap").css({"z-index":""});
+    $("html,body").removeClass("touchDis");
+    //scrollEnd();
+    
+    if("closeCallback" in option){
+      option.closeCallback();
+    }
+    
+    function scrollEnd(){
+      if(touchIs){
+        $("body").css({"margin-top":0});
+        window.scrollTo(0,Number($("body").data("data-scr")));
+      }
+    }
   });
 }
