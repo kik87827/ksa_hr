@@ -171,6 +171,7 @@ function dimLayerShow(option){
     if("openCallback" in option){
       option.openCallback();
     }
+    $("window").trigger("resize");
     function heightcheck(){
       if(touchIs){
         $("html").addClass("touchDis");

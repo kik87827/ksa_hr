@@ -74,6 +74,7 @@ select::-ms-expand {display: none;}
 .pb50{padding-bottom:50px !important;}
 .pb60{padding-bottom:60px !important;}
 .pb70{padding-bottom:70px !important;}
+.pboth10{padding-left:10px !important; padding-right: 10px !important;}
 .pboth15{padding-left:15px !important; padding-right: 15px !important;}
 .dbsym{font-weight:500 !important;;color:#000 !important;}
 .mb40{margin-bottom: 40px !important;}
