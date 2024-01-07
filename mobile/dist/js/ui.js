@@ -271,3 +271,73 @@ function tabUITab(target){
 		});
 	});
 }
+
+
+function propsButton(){
+  const props_button = document.querySelectorAll(".props_button");
+  if(!!props_button){
+    props_button.forEach((item)=>{
+      item.addEventListener("click",(e)=>{
+        e.preventDefault();
+        const thisITem = e.currentTarget;
+        const siblingItem = siblings(thisITem);
+
+        if(!!siblingItem){
+          siblingItem.forEach((item)=>{
+            if(thisITem !== item){
+              item.classList.remove("active");
+            }
+          });
+        }
+        thisITem.classList.toggle("active");
+      });
+    });
+  }
+}
+
+
+function siblings(t) {
+  var children = t.parentElement.children;
+  var tempArr = [];
+
+  for (var i = 0; i < children.length; i++) {
+    tempArr.push(children[i]);
+  }
+
+  return tempArr.filter(function(e) {
+    return e != t;
+  });
+}
+
+function autoComplete(option){
+  jQuery(document).ready(function ($) {
+      $.ui.autocomplete.prototype._renderItem = function (ul, item) {
+          var t = String(item.value).replace(
+              new RegExp(this.term, "gi"),
+              "<strong>$&</strong>");
+          return $("<li></li>")
+              .data("item.autocomplete", item)
+              .append("<div>" + t + "</div>")
+              .appendTo(ul);
+      };
+      const optionObj = option;
+      if(!!optionObj){
+          optionObj.forEach((item)=>{
+              $(item.target).autocomplete({
+                  minLength: 0,
+                  source: item.data,
+                  select: function (event, ui) {
+                      $(this).val(ui.item.value);
+                      console.log(ui.item);
+                      $(".ui-autocomplete").addClass("hide");
+                      return false;
+                  }
+              })
+          })
+      }
+
+      $(".input_auto").on("keydown focus",function(){
+        $(".ui-autocomplete").removeClass("hide");
+      });
+  });
+}

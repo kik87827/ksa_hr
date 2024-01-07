@@ -9,7 +9,8 @@
 	<link rel="stylesheet" href="./css/reset.css" />
 	<link rel="stylesheet" href="./css/layout.css" />
 	<link rel="stylesheet" href="./css/contents.css" />
-	<script src="./js/jquery-1.12.4.min.js"></script>
+	<script src="./js/jquery-3.6.0.js"></script>
+	<script src="./js/jquery-ui.js"></script>
 	<script src="./js/ui.js"></script>
 	<title>KSA 한국표준협회</title>
 </head>
@@ -72,9 +73,166 @@
 
 		<!-- middle -->
 		<section class="middle_zone">
-			내용이 들어갑니다.
+			<div class="form_field_item_zone">
+				<div class="fvtb_w type3">
+					<table class="fvtb">
+						<tbody>
+							<tr>
+								<th class="has_fvth_sp"><span class="fvth_sp imp">기간</span></th>
+								<td class="has_fitem">
+									<div class="td_block">
+										<div class="props_button_group">
+											<button type="button" class="props_button active">오늘</button>
+											<button type="button" class="props_button">당월</button>
+											<button type="button" class="props_button">전월</button>
+											<button type="button" class="props_button">올해</button>
+											<button type="button" class="props_button">기간</button>
+										</div>
+									</div>
+									<div class="td_block">
+										<div class="fvinitem_list_w">
+											<ul class="fvinitem_list">
+												<li><input type="date" class="input_calendar"></li>
+												<li class="has_fvelse3"><span class="fvelse">~</span></li>
+												<li><input type="date" class="input_calendar"></li>
+											</ul>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="has_fvth_sp"><span class="fvth_sp imp">상태</span></th>
+								<td class="has_fitem">
+									<div class="props_button_group">
+										<button type="button" class="props_button">전체</button>
+										<button type="button" class="props_button">결재완료</button>
+										<button type="button" class="props_button">발신 결재중</button>
+										<button type="button" class="props_button">수신 결재중</button>
+										<button type="button" class="props_button">임시 저장</button>
+										<button type="button" class="props_button">반려</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th class="has_fvth_sp"><span class="fvth_sp imp">신청서</span></th>
+								<td class="has_fitem">
+									<div class="fvdata_btb">
+										<div class="fvdata_btd fbtd01">
+											<div class="autocomplete_form_wrap">
+												<input type="text" class="fvint input_auto" id="input_auto_01">
+											</div>
+										</div>
+										<div class="fvdata_btd fbtd02">
+											<a href="javascript:;" class="itemin btn_csm type2">조회</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<style>
+					[name='history_table'] .ctb_wid04 {
+						width: 60px
+					}
+				</style>
+				<div class="hvtb_w type2 mt20">
+					<table class="hvtb ptype2" name="history_table">
+						<tbody>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">2020.01.01</span></td>
+								<td class="ctb_wid02"><span class="tb_data" style="color:green">증명서신청</span></td>
+								<td class="ctb_wid03"><span class="tb_data" style="color:orange">수신결재중</span></td>
+								<td class="ctb_wid04" rowspan="2"><a href="#" class="btn_csm xsm">상세보기</a></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">홍길동</span></td>
+								<td colspan="3" class="align_left"><span class="tb_data">비고 텍스트</span></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">2020.01.01</span></td>
+								<td class="ctb_wid02"><span class="tb_data" style="color:blue">증명서신청</span></td>
+								<td class="ctb_wid03"><span class="tb_data" style="color:blueviolet">수신결재중</span></td>
+								<td class="ctb_wid04" rowspan="2"><a href="#" class="btn_csm xsm">상세보기</a></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">홍길동</span></td>
+								<td colspan="3" class="align_left"><span class="tb_data">비고 텍스트</span></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">2020.01.01</span></td>
+								<td class="ctb_wid02"><span class="tb_data" style="color:red">증명서신청</span></td>
+								<td class="ctb_wid03"><span class="tb_data" style="color:aqua">수신결재중</span></td>
+								<td class="ctb_wid04" rowspan="2"><a href="#" class="btn_csm xsm">상세보기</a></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">홍길동</span></td>
+								<td colspan="3" class="align_left"><span class="tb_data">비고 텍스트</span></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">2020.01.01</span></td>
+								<td class="ctb_wid02"><span class="tb_data" style="color:skyblue">증명서신청</span></td>
+								<td class="ctb_wid03"><span class="tb_data" style="color:coral">수신결재중</span></td>
+								<td class="ctb_wid04" rowspan="2"><a href="#" class="btn_csm xsm">상세보기</a></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">홍길동</span></td>
+								<td colspan="3" class="align_left"><span class="tb_data">비고 텍스트</span></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">2020.01.01</span></td>
+								<td class="ctb_wid02"><span class="tb_data" style="color:gold">증명서신청</span></td>
+								<td class="ctb_wid03"><span class="tb_data" style="color:brown">수신결재중</span></td>
+								<td class="ctb_wid04" rowspan="2"><a href="#" class="btn_csm xsm">상세보기</a></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">홍길동</span></td>
+								<td colspan="3" class="align_left"><span class="tb_data">비고 텍스트</span></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">2020.01.01</span></td>
+								<td class="ctb_wid02"><span class="tb_data" style="color:magenta">증명서신청</span></td>
+								<td class="ctb_wid03"><span class="tb_data" style="color:cadetblue">수신결재중</span></td>
+								<td class="ctb_wid04" rowspan="2"><a href="#" class="btn_csm xsm">상세보기</a></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">홍길동</span></td>
+								<td colspan="3" class="align_left"><span class="tb_data">비고 텍스트</span></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">2020.01.01</span></td>
+								<td class="ctb_wid02"><span class="tb_data" style="color:gray">증명서신청</span></td>
+								<td class="ctb_wid03"><span class="tb_data">수신결재중</span></td>
+								<td class="ctb_wid04" rowspan="2"><a href="#" class="btn_csm xsm">상세보기</a></td>
+							</tr>
+							<tr>
+								<td class="ctb_wid01"><span class="tb_data">홍길동</span></td>
+								<td colspan="3" class="align_left"><span class="tb_data">비고 텍스트</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="pagination">
+					<a href="#none" class="first">Go to first</a>
+					<a href="#none" class="prev">Go to prev</a>
+					<a href="#none" class="num on">1</a>
+					<a href="#none" class="num">2</a>
+					<a href="#none" class="num">3</a>
+					<a href="#none" class="num">4</a>
+					<a href="#none" class="num">5</a>
+					<a href="#none" class="next">Go to next</a>
+					<a href="#none" class="last">Go to last</a>
+				</div>
+			</div>
 		</section>
 		<!-- // middle -->
+		<script>
+			propsButton();
+			autoComplete([{
+				target: "#input_auto_01",
+				data: ["김지윤(경영HR센터)", "김지훈(사업팀)", "김지희(경영교육혁신센터)"]
+			}]);
+		</script>
 	</div>
 </body>
 

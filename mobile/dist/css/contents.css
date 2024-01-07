@@ -3,6 +3,9 @@
 /*
 	컨텐츠 css
 */
+.hide{display:none !important;}
+.ui-helper-hidden-accessible{display:none;}
+
 .middle_zone.main_contents_wrap{padding:0 15px 30px;}
 .mc_row{}
 .mc_row.define_mc{margin-top:10px;}
@@ -484,6 +487,36 @@ textarea{resize:none;font-family: 'NotoSans-Regular';-webkit-appearance: none;-m
 .fvta{height:50px;}
 
 
+.td_block_group{}
+.td_block{margin-bottom:10px;}
+.td_block:last-of-type{margin-bottom:0;}
+
+.props_button_group{display:flex;flex-wrap:wrap;gap:5px;}
+.props_button{
+	background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 1000px;
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;
+	padding:5px 15px 6px;
+	line-height:1;
+	appearance: none;
+	line-height:1;
+}
+.props_button.active{background:#2b8bf2;border-color:#2b8bf2;color:#fff;}
+.props_button_group{}
+
+.autocomplete_form_wrap{}
+input.input_autocomplete{}
+.auto_option_list_wrap{}
+.auto_option_list{}
+.auto_option_list > li{}
+.auto_option_list > li:last-of-type{}
+.auto_option{}
+.auto_option:hover{}
+.auto_option.active{}
+
 .hvtb_w{border-top:1px solid #626262;}
 .hvtb_w.mtype2{margin:0 -15px;}
 .hvtb{width:100%;text-align:center;}
@@ -493,6 +526,7 @@ textarea{resize:none;font-family: 'NotoSans-Regular';-webkit-appearance: none;-m
 .hvtb thead th.widtype2{width:35%;}
 .hvtb tbody td{border-right:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;padding:5px 0;font-size:12px;}
 .hvtb tbody td:last-of-type{border-right:0;}
+.hvtb tbody td.has_chk{border-left:0 !important;width:30px;}
 .hvtb tbody td.type2{padding:5px 12px;text-align:right;}
 .hvtb tbody td.align_left{padding:5px 12px;text-align:left;}
 .hvtb tbody td.align_right{padding:5px 12px;text-align:right;}
@@ -599,6 +633,11 @@ select.dsel:disabled{background-color:#f7f7f7;color:#999999;;opacity:1;}
 input.input_search{width:100%;height:28px;line-height:1;appearance: none;padding:0 10px;box-sizing: border-box;}
 input.input_search:disabled{background:none;}
 .btn_search_form_submit{width:28px;height:28px;flex:0 0 28px;background:url("../images/btn_searchico.png") no-repeat 50% 50%/14px auto;}
+
+
+.ui-autocomplete{background:#fff;border:1px solid #bbbbbb;border-top:0;}
+.ui-autocomplete > .ui-menu-item{padding:5px 10px}
+.ui-autocomplete > .ui-menu-item strong{color:#2b8bf2;}
 /* // form */
 
 
