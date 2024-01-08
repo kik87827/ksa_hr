@@ -412,6 +412,9 @@ input.props_form:checked{background-position:0 100%; border-color:#2b8bf2; backg
 .fvtb_w.dtype3 .fvtb {
 	border-top: 1px solid #d9d9d9;
 }
+.fvtb_w .define_submit{width:1px;white-space: nowrap;border-left:1px solid #d9d9d9;}
+
+
 .fphoto_z {
 	position: absolute;
 	top: 0;
@@ -570,6 +573,7 @@ select.dsel:disabled{background-color:#f7f7f7;color:#999999;;opacity:1;}
 .btn_csm.type3{background:#4b4b4b;border-color:#4b4b4b;}
 .btn_csm.type4{background:#fff;border-color:#2b8bf2;color:#2b8bf2;}
 .btn_csm.size2{min-width:0;padding:4px 8px 5px !important; line-height:1;font-size:11px;}
+.btn_csm.corner_type2{border-radius:5px;}
 
 .data_tb_z{position:relative;overflow:hidden;overflow-x:auto;}
 .data_tb_w{border-top:1px solid #626262;font-size:12px;}
