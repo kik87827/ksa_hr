@@ -283,7 +283,7 @@ input.props_form:checked{background-position:0 100%; border-color:#2b8bf2; backg
 .form_field_item {margin-bottom: 30px;}
 .form_field_item:last-of-type {margin-bottom: 0;}
 .form_field_item.else_margin{margin:0 -15px 30px;}
-.else_type{margin:0 -15px;}
+/* .else_type{margin:0 -15px;} */
 
 
 .ctb2_w01{}
@@ -301,6 +301,13 @@ input.props_form:checked{background-position:0 100%; border-color:#2b8bf2; backg
 
 .form_field_title_else_wrap{display:flex;gap:5px;justify-content:flex-end; }
 .form_field_title_else_wrap .btn_csm{margin:0;min-width:40px;display:flex;align-items: center; justify-content: center;white-space: nowrap;}
+
+.form_field_content_row{margin:0 -15px;}
+
+.form_field_block{margin:0 0 15px;}
+.form_field_block:last-of-type{margin-bottom:0;}
+.form_field_block_title{margin:0 20px 10px;font-weight:700;font-size:13px;position:relative;padding-left:10px;}
+.form_field_block_title:before{display:inline-block;content:'';position:absolute;top:6.5px;left:-3px;width:6px;height:6px;border-right:1px solid #000;border-top:1px solid #000; transform: rotate(45deg);}
 
 .file_form_group {margin: 20px 15px 0;}
 .fvdata_txt {display: inline-block;margin-right: 20px;}
