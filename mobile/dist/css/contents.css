@@ -181,6 +181,7 @@ input.form_input{font-family: 'NotoSans-Regular';color:#333;font-size:13px; font
 .tbsk_tb_w.scroll_has .tbsk_tb{table-layout: auto;}
 .tbsk_tb_w.scroll_has th,
 .tbsk_tb_w.scroll_has td{padding:10px !important;}
+.tbsk_tb_w.scroll_has th.ptype2{padding:0 10px !important;}
 .tbsk_tb{width:100%;color:#2b2b2b;font-size:12px;text-align:center;table-layout: fixed;}
 .tbsk_tb thead th{border-bottom:1px solid #000;border-right:1px solid #d9d9d9;padding:10px 5px;color:#1b1b1b;font-family: 'NotoSans-Medium';background:#f9f9f9;}
 .tbsk_tb thead th:last-of-type{border-right:0}
@@ -283,6 +284,7 @@ input.props_form:checked{background-position:0 100%; border-color:#2b8bf2; backg
 .form_field_item {margin-bottom: 30px;}
 .form_field_item:last-of-type {margin-bottom: 0;}
 .form_field_item.else_margin{margin:0 -15px 30px;}
+.form_field_item.else_margin .form_field_content_row{margin-left:0;margin-right:0;}
 /* .else_type{margin:0 -15px;} */
 
 
@@ -409,6 +411,10 @@ input.props_form:checked{background-position:0 100%; border-color:#2b8bf2; backg
 .fvtb tbody tr.type2 table tr:last-of-type td{border-bottom:0;}
 .fvtb tbody td.nbsp_emptyline{padding:0 !important;height:10px;}
 .fvtb tbody td.has_fphoto{padding:15px}
+
+.fitem_data{display:inline-block;font-size:12px;line-height:1.3;}
+
+
 .fvth_sp{position:relative;display:inline-block;white-space:nowrap;color:#1b1b1b;font-size:12px;position:relative;line-height:1.2;}
 .fvth_sp.imp{padding-left:8px;}
 .fvth_sp.imp:after{display:block;content:'';width:3px;height:3px;background:#2b8bf2;border-radius:100%;position:absolute;top:6px;left:0;}
@@ -437,6 +443,8 @@ input.props_form:checked{background-position:0 100%; border-color:#2b8bf2; backg
 }
 .inline_cols_wrap{display:flex; align-items: center;}
 .inline_cols_wrap.gap_type2{gap:10px;}
+.inline_cols_wrap.auto_type2{}
+.inline_cols_wrap.auto_type2 .inline_cols{flex:none;}
 .inline_cols{flex:1;}
 .inline_cols.short{flex:0 0 45%;}
 .inline_cols input.input_time{}
@@ -502,8 +510,12 @@ input.input_time:read-only{background:#f7f7f7;color:#999999;opacity:1;}
 .btn_text_obj .d_norsp{}
 .btn_text_obj .ico{display:inline-block;vertical-align:middle;width:11px;position:absolute;top:50%;right:0;transform:translate(0,-50%);height:11px;background-position:0 0;background-repeat:no-repeat;background-size:100% auto;}
 .btn_text_obj .ico.search{background-image:url("../images/btn_searchico.png");}
+.btn_text_obj.type2{display:inline-flex;align-items: center;padding-left:0;}
+.btn_text_obj.type2 .d_norsp{line-height:1.3;font-size:12px;}
 textarea{resize:none;font-family: 'NotoSans-Regular';-webkit-appearance: none;-moz-appearance: none;font-size:12px;-webkit-shadow:none;border:1px solid #bbb;-webkit-border-radius:0; color:#2b2b2b; width:100%; padding:5px 10px;box-sizing:border-box;}
 .fvta{height:50px;}
+
+.inline_inflex_wrap{display:flex; flex-wrap:wrap;gap:5px 10px;}
 
 
 .td_block_group{}
@@ -617,8 +629,21 @@ select.dsel:disabled{background-color:#f7f7f7;color:#999999;;opacity:1;}
 .data_tb .has_wpsp.has_ico{width:25px !important;}
 .data_tb .has_wpsp.has_ico2{width:25px !important;}
 .data_tb .has_wpsp.has_btn{width:60px !important;}
+.data_tb .has_num{width:40px !important;}
 .data_tb .has_norsp{}
 .data_tb .has_item{font-size:0;line-height:0;}
+
+.data_tb_z.type2{}
+.data_tb_z.type2 .data_tb_w.define_thead{border-bottom:0;border-top:0;}
+.data_tb_z.type2 .data_tb_w.define_thead .data_tb:before,
+.data_tb_z.type2 .data_tb_w.define_thead .data_tb:after{display:block;content:'';height:1px;background:#585858;position:absolute;top:0;left:0;width:100%;}
+.data_tb_z.type2 .data_tb_w.define_thead .data_tb:after{top:auto;bottom:0;}
+.data_tb_z.type2 .data_tb_w.define_thead .data_tb{border-bottom:0;position:relative;}
+
+
+.data_tb_z.type2 th,
+.data_tb_z.type2 td{box-sizing: border-box;}
+
 
 
 .rdchkitem_list_w{}
@@ -681,6 +706,10 @@ input.input_search:disabled{background:none;}
 .indent_text_group{flex:1;}
 .redimp,
 .redimp *{color:#ff0000 !important;}
+
+@media (max-width:500px){
+	.data_tb_z.type2 .data_tb{min-width:500px;}
+}
 
 @media (max-width:400px){
 	.btn_text_obj{padding:0;font-size:0;line-height:0;display:flex;align-items: center;gap:5px;justify-content: center;}
@@ -832,6 +861,7 @@ input.input_search:disabled{background:none;}
 .dlayer_cont_low .btn_dclaysm_w {
 	margin-bottom: 15px;
 }
+.dlayer_cont_low .form_field_content_row{margin:0;}
 
 .dlayer_cont_message{text-align: center;padding:50px 20px;text-align: center;font-size:15px;}
 .btn_dsubmit_group{display:flex;justify-content: center;padding:0 20px 20px;gap:10px;}
