@@ -596,6 +596,13 @@ select.dsel:disabled{background-color:#f7f7f7;color:#999999;;opacity:1;}
 .btn_csm.size2{min-width:0;padding:4px 8px 5px !important; line-height:1;font-size:11px;}
 .btn_csm.corner_type2{border-radius:5px;}
 
+.data_table_top {
+	text-align: right;
+	margin: 15px;
+	font-size: 0;
+	line-height: 0;
+}
+
 .data_tb_z{position:relative;overflow:hidden;overflow-x:auto;}
 .data_tb_w{border-top:1px solid #626262;font-size:12px;}
 .data_tb_w.define_thead{background-color:#f9f9f9;border-bottom:1px solid #585858}
@@ -645,6 +652,41 @@ select.dsel:disabled{background-color:#f7f7f7;color:#999999;;opacity:1;}
 .data_tb_z.type2 td{box-sizing: border-box;}
 
 
+.btn_control_updown {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border-radius: 3px;
+	background: #2b8bf2;
+	position: relative;
+	vertical-align: middle;
+}
+
+.btn_control_updown:after {
+	display: block;
+	content: '';
+	width: 6px;
+	height: 6px;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	position: absolute;
+	top: 8px;
+	left: 5.5px;
+}
+
+.btn_control_updown.type_up {}
+
+.btn_control_updown.type_up:after {
+	transform: rotate(225deg);
+}
+
+.btn_control_updown.type_down {}
+
+.btn_control_updown.type_down:after {
+	transform: rotate(45deg);
+	top: 3px;
+	left: 5.5px;
+}
 
 .rdchkitem_list_w{}
 .rdchkitem_list{position:relative;top:5px;display:flex;flex-wrap:wrap;}
@@ -1133,3 +1175,14 @@ input.input_search:disabled{background:none;}
 	-webkit-transform:rotate(45deg);transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);top:1px;
 }
 .pnt_ellipsis{display:inline-block; box-sizing:border-box; position:relative;height:19px; font-size:14px;line-height:1.2; white-space: nowrap; text-overflow: ellipsis;overflow:hidden;position:relative; max-width:100%;}
+
+
+
+.dlay_sort_w{padding:15px;}
+.dlsort_tit{font-size:13px;color:#1b1b1b;font-weight:400;line-height:1;margin-bottom:10px;}
+.dlsort_form_tb{display:table;width:100%;}
+.dlsort_form_td{display:table-cell;vertical-align: middle;}
+.dlsort_form_td.dlsort01{}
+.dlsort_form_td.dlsort02{width:1px;padding-left:5px;}
+input.dlsort_int{height:35px;line-height:1;width:100%;box-sizing:border-box;border:1px solid #ddd;font-size:13px;padding:0 10px;}
+.btn_dlsort{display:inline-block;background:#fbf9ff;box-sizing:border-box;color:#6e35e2;border:1px solid #6e35e2;white-space:nowrap;border-radius:100px;font-size:13px;padding:0 15px;height:35px;line-height:33px;}
