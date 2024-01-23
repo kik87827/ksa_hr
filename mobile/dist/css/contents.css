@@ -1128,6 +1128,8 @@ input.input_search:disabled{background:none;}
 
 /*  */
 
+.data_toptit_wrap{padding:15px 15px 0;}
+.data_toptit_wrap .dlsort_tit{}
 
 /* paging */
 .pagination {text-align: center;line-height:0;font-size:0; padding:0 0 0;margin-top:20px;}
