@@ -180,3 +180,6 @@ body ::-webkit-scrollbar-track {background-color: transparent;border-radius: 10p
 	
 	
 	
+	.header_banner_wrap{position:absolute;top:0;left:50%;transform: translateX(-50%);height:47px;}
+	.header_banner{display:inline-block;}
+	.header_banner img{vertical-align: top; object-fit: contain; object-position: 50% 50%;}
